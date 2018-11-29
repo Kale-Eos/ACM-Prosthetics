@@ -1,4 +1,6 @@
 #include <Herkulex.h>
+#include<Fistcode.ino>
+#include<peacefist.ino>
 
 void setup()  
 {
@@ -65,6 +67,8 @@ void setup()
 }
 
 void loop(){
+  
+  delay(1000);
   
   Herkulex.moveAllAngle(1, 15, 2);
   Herkulex.moveAllAngle(2, -15, 2); 
