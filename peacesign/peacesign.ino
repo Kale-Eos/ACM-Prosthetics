@@ -66,10 +66,14 @@ void setup()
 
 void loop(){
   
-  Herkulex.moveAllAngle(1, 15, 2);;
+  Herkulex.moveAllAngle(1, 15, 2);
   Herkulex.moveAllAngle(2, -15, 2); 
   Herkulex.actionAll(2000);
   delay(2100);
+  Serial.print("Get Angle1:"); 
+  Serial.println(Herkulex.getAngle(1));
+  Serial.print("Get Angle2:"); 
+  Serial.println(Herkulex.getAngle(2));
   
   quote = 0;
   while (quote < 2){
@@ -78,9 +82,18 @@ void loop(){
   Herkulex.moveAll(2, 200, 2); //move to position 820 
   Herkulex.actionAll(1000); //start movement in 1500 milliseconds
   delay(1100);
+  Serial.print("Get Position servo 1:"); 
+  Serial.println(Herkulex.getPosition(1)); //get position
+  Serial.print("Get Position servo 2:"); 
+  Serial.println(Herkulex.getPosition(2));//get position
+  
   Herkulex.moveAll(1, 0, 2); //move to position 200
   Herkulex.moveAll(2, 0, 2); //move to position 820
-  delaly(1100);
+  delay(1100);
+  Serial.print("Get Position servo 1:"); 
+  Serial.println(Herkulex.getPosition(1)); //get position
+  Serial.print("Get Position servo 2:"); 
+  Serial.println(Herkulex.getPosition(2));//get position
   
   quote = quote + 1;
   }
@@ -88,6 +101,10 @@ void loop(){
   Herkulex.moveAllAngle(2, 15, 2); 
   Herkulex.actionAll(2000);
   delay(2100);
+  Serial.print("Get Angle1:"); 
+  Serial.println(Herkulex.getAngle(1));
+  Serial.print("Get Angle2:"); 
+  Serial.println(Herkulex.getAngle(2));
   
 }
 
