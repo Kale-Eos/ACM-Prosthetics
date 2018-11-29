@@ -19,15 +19,15 @@ void loop() {
 
   Serial.print1n(voltage)
   if(voltage) >=1.5 & <= 4.5
-  delay(1000);
+  delay(191);
   servo1.write(127);
-  delay(1000);
+  delay(191);
   servo2.write(127)
-  delay(1000);
+  delay(191);
   else
-  delay(1000);
+  delay(191);
   servo1.write(sP);
-  deay(1000)
+  deay(191)
   servo2.write(sP);
 
 }
